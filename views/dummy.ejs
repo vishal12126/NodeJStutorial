@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <h1>You searched for : <%=data.userQuery %></h1>
+        <% if (data.loggedIn) { %>
+            <h2>you ar logged in as : <%=data.username%></h2>
+            <% } %>
+        <ul>
+        <!-- <li>data1: <%= data.searchresults[0]%></li>
+        <li>data2: <%= data.searchresults[1]%></li>
+        <li>data3: <%= data.searchresults[2]%></li> -->
+        <li>
+            <% data.searchresults.forEach(result => { %>
+                <li> <%=result %> </li>
+            <% }); %>
+        </li>
+        </ul>
+    </body>
+</html>
